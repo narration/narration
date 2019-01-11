@@ -1,0 +1,49 @@
+{
+    "name": "nunomaduro/skeleton-php",
+    "description": "A skeleton repository for my packages",
+    "keywords": ["php", "skeleton", "package"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nuno Maduro",
+            "email": "enunomaduro@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "guzzlehttp/guzzle": "^6.3",
+        "middlewares/fast-route": "^1.2",
+        "middlewares/request-handler": "^1.4",
+        "narration/http": "@dev",
+        "zendframework/zend-diactoros": "^2.1",
+        "zendframework/zend-httphandlerrunner": "^1.0"
+    },
+    "repositories":[
+        {
+        "type": "path",
+        "url": "../*"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^7.4",
+        "phpstan/phpstan": "^0.10"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Application\\": "src/Application",
+            "Domain\\": "src/Domain",
+            "Infrastructure\\": "src/Infrastructure"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist"
+    }
+}
