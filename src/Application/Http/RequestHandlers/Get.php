@@ -21,6 +21,7 @@ final class Get implements RequestHandlerInterface
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         // Perform an action
+
         return Response::json([
             'fresh' => 'start'
         ]);
