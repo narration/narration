@@ -1,5 +1,5 @@
+/node_modules
+/vendor
 .idea/*
-.idea/codeStyleSettings.xml
-composer.lock
-/vendor/
-coverage.xml
+.env
+.phpunit.result.cache
