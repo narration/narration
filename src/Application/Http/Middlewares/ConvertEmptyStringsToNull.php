@@ -17,5 +17,5 @@ class ConvertEmptyStringsToNull implements Middleware, BeforeRequestHandlingInte
 
         return $next($request);
     }
-    
+
 }
