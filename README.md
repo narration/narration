@@ -21,6 +21,13 @@ Create your package using [Composer](https://getcomposer.org):
 composer create-project narration/narration --prefer-source PackageName
 ```
 
+Then, serve the appplication:
+```
+php -S 127.0.0.1:8000 serve.php
+```
+
+Finally, visit the page `http://127.0.0.1:8000/`.
+
 ## Contributing
 
 Thank you for considering to contribute to skeleton-php. All the contribution guidelines are mentioned [here](CONTRIBUTING.md).
