@@ -1,13 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 require __DIR__.'/../vendor/autoload.php';
 
 $request = Narration\Http\Message\Request::capture();
 
-$kernel = Narration\Http\Kernel::fromPath(__DIR__.'/../src/Application/Http/RequestHandlers');
+$kernel = Narration\Http\Kernel::fromPath(__DIR__.'/../src/Application/Http');
 
 $response = $kernel->handle($request);
 
-(new \Zend\HttpHandlerRunner\Emitter\SapiEmitter)->emit($response);
-
-$kernel->terminate($request, $response);
+Narration\Http\Message\Emitter::make()->emit($response);
