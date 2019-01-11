@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": "^7.3",
+        "php": "^7.2",
         "narration/http": "@dev"
     },
     "repositories":[
