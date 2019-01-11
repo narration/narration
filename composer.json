@@ -1,5 +1,5 @@
 {
-    "name": "nunomaduro/skeleton-php",
+    "name": "narration/narration",
     "description": "A skeleton repository for my packages",
     "keywords": ["php", "skeleton", "package"],
     "license": "MIT",
@@ -11,12 +11,7 @@
     ],
     "require": {
         "php": "^7.3",
-        "guzzlehttp/guzzle": "^6.3",
-        "middlewares/fast-route": "^1.2",
-        "middlewares/request-handler": "^1.4",
-        "narration/http": "@dev",
-        "zendframework/zend-diactoros": "^2.1",
-        "zendframework/zend-httphandlerrunner": "^1.0"
+        "narration/http": "@dev"
     },
     "repositories":[
         {
