@@ -15,8 +15,8 @@
     },
     "repositories":[
         {
-        "type": "path",
-        "url": "../*"
+            "type": "path",
+            "url": "../*"
         }
     ],
     "require-dev": {

@@ -10,12 +10,6 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 final class Get implements RequestHandlerInterface
 {
-    /**
-     * Given this egaeg eagabdoptrpg
-     *
-     * @param  ServerRequestInterface $request
-     * @return ResponseInterface
-     */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $response = new \Zend\Diactoros\Response\JsonResponse(['nuno' => 'nuno']);
