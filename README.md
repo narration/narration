@@ -1,19 +1,15 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/nunomaduro/skeleton-php/master/docs/example.png" alt="Skeleton example" height="300">
+  <a href="https://travis-ci.org/narration/narration"><img src="https://img.shields.io/travis/narration/narration/master.svg" alt="Build Status"></img></a>
+  <a href="https://scrutinizer-ci.com/g/narration/narration"><img src="https://img.shields.io/scrutinizer/g/narration/narration.svg" alt="Quality Score"></img></a>
+  <a href="https://scrutinizer-ci.com/g/narration/narration"><img src="https://img.shields.io/scrutinizer/coverage/g/narration/narration.svg" alt="Coverage"></img></a>
+  <a href="https://packagist.org/packages/narration/narration"><img src="https://poser.pugx.org/narration/narration/d/total.svg" alt="Total Downloads"></a>
+  <a href="https://packagist.org/packages/narration/narration"><img src="https://poser.pugx.org/narration/narration/v/stable.svg" alt="Latest Version"></a>
+  <a href="https://packagist.org/packages/narration/narration"><img src="https://poser.pugx.org/narration/narration/license.svg" alt="License"></a>
 </p>
 
-<p align="center">
-  <a href="https://travis-ci.org/nunomaduro/skeleton-php"><img src="https://img.shields.io/travis/nunomaduro/skeleton-php/master.svg" alt="Build Status"></img></a>
-  <a href="https://scrutinizer-ci.com/g/nunomaduro/skeleton-php"><img src="https://img.shields.io/scrutinizer/g/nunomaduro/skeleton-php.svg" alt="Quality Score"></img></a>
-  <a href="https://scrutinizer-ci.com/g/nunomaduro/skeleton-php"><img src="https://img.shields.io/scrutinizer/coverage/g/nunomaduro/skeleton-php.svg" alt="Coverage"></img></a>
-  <a href="https://packagist.org/packages/nunomaduro/skeleton-php"><img src="https://poser.pugx.org/nunomaduro/skeleton-php/d/total.svg" alt="Total Downloads"></a>
-  <a href="https://packagist.org/packages/nunomaduro/skeleton-php"><img src="https://poser.pugx.org/nunomaduro/skeleton-php/v/stable.svg" alt="Latest Version"></a>
-  <a href="https://packagist.org/packages/nunomaduro/skeleton-php"><img src="https://poser.pugx.org/nunomaduro/skeleton-php/license.svg" alt="License"></a>
-</p>
+## About Narration
 
-## About skeleton-php
-
-skeleton-php was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is an skeleton for php packages.
+Narration was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is lightweight and modular micro-framework for developing fast and powerful web applications.
 
 ## Installation & Usage
 
@@ -22,7 +18,7 @@ skeleton-php was created by, and is maintained by [Nuno Maduro](https://github.c
 Create your package using [Composer](https://getcomposer.org):
 
 ```bash
-composer create-project nunomaduro/skeleton-php --prefer-source PackageName
+composer create-project narration/narration --prefer-source PackageName
 ```
 
 ## Contributing
@@ -39,4 +35,4 @@ You can have a look at the [CHANGELOG](CHANGELOG.md) for constant updates & deta
 
 ## License
 
-skeleton-php is an open-sourced software licensed under the [MIT license](LICENSE.md).
+Narration is an open-sourced software licensed under the [MIT license](LICENSE.md).
