@@ -1,6 +1,6 @@
 {
     "name": "narration/narration",
-    "description": "The Framework Framework.",
+    "description": "The Narration Framework.",
     "keywords": ["narration", "php", "framework"],
     "license": "MIT",
     "authors": [
@@ -11,12 +11,12 @@
     ],
     "require": {
         "php": "^7.1.3",
-        "narration/http": "@dev"
+        "narration/http": "dev-master"
     },
     "repositories":[
         {
             "type": "path",
-            "url": "../*"
+            "url": "../http"
         }
     ],
     "require-dev": {
