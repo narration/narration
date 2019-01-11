@@ -2,9 +2,9 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-$request = Narration\Http\Message\Request::fromGlobals();
+$request = Narration\Http\Message\Request::capture();
 
-$kernel = Narration\Http\Kernel::fromPath('../src/Application/Http');
+$kernel = Narration\Http\Kernel::fromPath(__DIR__.'/../src/Application/Http/RequestHandlers');
 
 $response = $kernel->handle($request);
 
