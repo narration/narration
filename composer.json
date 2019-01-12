@@ -11,12 +11,12 @@
     ],
     "require": {
         "php": "^7.1.3",
-        "narration/http": "dev-master"
+        "narration/framework": "dev-master"
     },
     "repositories":[
         {
             "type": "path",
-            "url": "../http"
+            "url": "../framework"
         }
     ],
     "require-dev": {

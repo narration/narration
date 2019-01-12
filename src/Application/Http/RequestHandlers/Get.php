@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Application\Http\RequestHandlers;
 
-use Narration\Http\Message\Response;
+use Narration\Framework\Http\Message\Response;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
