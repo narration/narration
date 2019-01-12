@@ -7,12 +7,16 @@ namespace Application\Injectors;
 final class Logger
 {
     /**
-     * Injects the logger into the container.
+     * Injects the logger into the container definitions.
      *
-     * @param \Application\Container
+     * @param array $definitions
+     *
+     * @return array
      */
-    public function __invoke(Container $container): void
+    public function __invoke(array $definitions): array
     {
-        // $container->inject(Psr\Log\LoggerInterface::class, \Infrastructure\Logger::class)
+        // $definitions[\Psr\Log\LoggerInterface::class] = \Infrastructure\Logger::class;
+
+        return $definitions;
     }
 }

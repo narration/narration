@@ -6,7 +6,7 @@ require __DIR__.'/../vendor/autoload.php';
 
 $request = Narration\Framework\Http\Message\Request::capture();
 
-$kernel = Narration\Framework\Http\Kernel::fromPath(__DIR__.'/../src/Application/Http');
+$kernel = Narration\Framework\Http\Kernel::create(__DIR__.'/../composer.json');
 
 $response = $kernel->handle($request);
 
