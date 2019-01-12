@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Application;
 
-use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
-use Psr\Container\NotFoundExceptionInterface;
 
 final class Container implements ContainerInterface
 {
