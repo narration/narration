@@ -18,7 +18,7 @@ Narration was created by, and is maintained by [Nuno Maduro](https://github.com/
 Create your package using [Composer](https://getcomposer.org):
 
 ```bash
-composer create-project narration/narration --prefer-source blog
+composer create-project narration/narration blog --stability=dev --prefer-source
 ```
 
 Then, serve the appplication:
