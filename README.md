@@ -10,11 +10,13 @@
   <a href="https://packagist.org/packages/narration/narration"><img src="https://poser.pugx.org/narration/narration/license.svg" alt="License"></a>
 </p>
 
-## About Narration
+**This is a work in progress**.
 
-Narration was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is lightweight and modular micro-framework for developing fast and powerful web applications.
+Narration is the source for modern PHP - Using PHPStan, it enforces the
+implementation of proven patterns to bring resilience, reliability, and
+coordination to your web application.
 
-## Installation & Usage
+## Quick start
 
 > **Requires [PHP 7.1.3+](https://php.net/releases/)**
 
@@ -29,7 +31,23 @@ Then, serve the appplication:
 php -S 127.0.0.1:8000 serve.php
 ```
 
-Finally, visit the page `http://127.0.0.1:8000/`.
+Visit the page `http://127.0.0.1:8000/`.
+
+## Structure
+
+### Presentation
+
+### Application
+
+#### Http > Request Handlers
+
+#### Http > Middleware
+
+#### Injectors
+
+### Domain
+
+### Infrastructure
 
 ## Contributing
 
