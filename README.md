@@ -1,7 +1,10 @@
 <p align="center">
+    <img title="Narration" height="100" src="https://raw.githubusercontent.com/narration/narration/docs/master/docs/request-handler.png" />
+</p>
+
+<p align="center">
   <a href="https://travis-ci.org/narration/narration"><img src="https://img.shields.io/travis/narration/narration/master.svg" alt="Build Status"></img></a>
   <a href="https://scrutinizer-ci.com/g/narration/narration"><img src="https://img.shields.io/scrutinizer/g/narration/narration.svg" alt="Quality Score"></img></a>
-  <a href="https://scrutinizer-ci.com/g/narration/narration"><img src="https://img.shields.io/scrutinizer/coverage/g/narration/narration.svg" alt="Coverage"></img></a>
   <a href="https://packagist.org/packages/narration/narration"><img src="https://poser.pugx.org/narration/narration/d/total.svg" alt="Total Downloads"></a>
   <a href="https://packagist.org/packages/narration/narration"><img src="https://poser.pugx.org/narration/narration/v/stable.svg" alt="Latest Version"></a>
   <a href="https://packagist.org/packages/narration/narration"><img src="https://poser.pugx.org/narration/narration/license.svg" alt="License"></a>
