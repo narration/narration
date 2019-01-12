@@ -12,9 +12,8 @@
 
 **This is a work in progress**.
 
-Narration is the source for modern PHP - Using PHPStan, it enforces the
-implementation of proven patterns to bring resilience, reliability, and
-coordination to your web application.
+Narration is the source for modern PHP - It enforces the implementation of proven
+patterns to bring resilience, reliability, and coordination to your web application.
 
 ## Quick start
 
@@ -26,24 +25,21 @@ Create your package using [Composer](https://getcomposer.org):
 composer create-project narration/narration blog --stability=dev --prefer-source
 ```
 
-Then, serve the appplication:
+Then, serve the appplication at `http://127.0.0.1:8000/`:
 ```
 php -S 127.0.0.1:8000 serve.php
 ```
-
-Visit the page `http://127.0.0.1:8000/`.
 
 ## Structure
 
 ### Presentation
 
-TODO...
+This presentation layer should contain everythin related to User Interface. TODO...
 
 ### Application
 
-Defines the jobs the software is supposed to do and directs the expressive domain objects to work out problems.
-The tasks this layer is responsible for are meaningful to the business or necessary for interaction with
-the application layers of other systems. This **layer is kept thin**.
+The application logic is where you implement all use cases that depend on a given front end. It delegates the
+execution of business rules to the domain layer. **Keep this layer thin**.
 
 #### Http > Request Handlers
 
@@ -115,11 +111,7 @@ be placed `Appplication/Injectors` to be detected by the Narration Framework. TO
 
 ### Domain
 
-Responsible for representing concepts of the business, information
-about the business situation, and business rules. State that reflects
-the business situation is controlled and used here, even though the
-technical details of storing it are delegated to the infrastructure.
-This layer is the **heart of business software**.
+Responsible for representing concepts of the business rules. This layer is the **heart of business software**.
 
 ### Infrastructure
 
