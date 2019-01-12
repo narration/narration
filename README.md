@@ -1,5 +1,5 @@
 <p align="center">
-    <img title="Narration" height="100" src="https://raw.githubusercontent.com/narration/narration/docs/master/docs/request-handler.png" />
+    <img title="Narration" height="100" src="https://raw.githubusercontent.com/narration/narration/master/docs/request-handler.png" />
 </p>
 
 <p align="center">
