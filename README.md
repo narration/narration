@@ -41,7 +41,7 @@ This presentation layer should contain everythin related to User Interface. TODO
 The application logic is where you implement all use cases that depend on a given front end. It delegates the
 execution of business rules to the domain layer. **Keep this layer thin**.
 
-#### Http > Request Handlers
+#### Application > Http > Request Handlers
 
 HTTP request handlers are a fundamental part of any web application. Server-side code receives a
 request message, processes it, and produces a response message:
@@ -70,7 +70,7 @@ of the request handler. As example, the route `POST /users` can be defined
 creating the following Request Handler: `Appplication/Http/RequestHandlers/Users/Post.php`. This
 convention leads code that is easier to maintain, refactor and test.
 
-#### Http > Middleware
+#### Application > Http > Middleware
 
 An HTTP middleware component participates in processing an HTTP message. It acts
 on the request, generating the response, or forwarding the request to a subsequent middleware
@@ -103,7 +103,7 @@ final class TrimStrings implements MiddlewareInterface
 Middleware(s) **should** be placed `Appplication/Http/RequestHandlers` to be
 detected by the Narration Framework.
 
-#### Injectors
+#### Application > Injectors
 
 An injector injects the dependencies of the application on the container. They **should**
 be placed `Appplication/Injectors` to be detected by the Narration Framework. TODO...
