@@ -4,17 +4,15 @@ declare(strict_types=1);
 
 namespace Application\Injectors;
 
-use Psr\Container\ContainerInterface;
-
 final class Logger
 {
     /**
-     * Injects the logger service into the container.
+     * Injects the logger into the container.
      *
-     * @param \Psr\Container\ContainerInterface $container
+     * @param \Application\Container
      */
-    public function __invoke(ContainerInterface $container): void
+    public function __invoke(Container $container): void
     {
-        // ...
+        // $container->inject(Psr\Log\LoggerInterface::class, \Infrastructure\Logger::class)
     }
 }
