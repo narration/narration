@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 require __DIR__.'/../vendor/autoload.php';
 
-$request = Narration\Framework\Http\Message\Request::capture();
+$request = \Zend\Diactoros\ServerRequestFactory::fromGlobals();
 
 $kernel = Narration\Framework\Http\Kernel::create(__DIR__.'/../composer.json');
 
 $response = $kernel->handle($request);
 
-Narration\Framework\Http\Message\Emitter::make()->emit($response);
+(new \Zend\HttpHandlerRunner\Emitter\SapiEmitter())->emit($response);

@@ -1,4 +1,5 @@
 includes:
+    - vendor/phpstan/phpstan-doctrine/extension.neon
     - vendor/phpstan/phpstan-strict-rules/rules.neon
     - vendor/thecodingmachine/phpstan-strict-rules/phpstan-strict-rules.neon
 
@@ -7,3 +8,4 @@ parameters:
     paths:
         - src
         - tests
+        - public
