@@ -38,6 +38,6 @@ final class Get implements RequestHandlerInterface
     {
         $id = $request->getAttribute('id');
 
-        return Response::json($this->taskRepository->find($id));
+        return Response::html(file_get_contents(__DIR__.'/../../../../Presentation/index.html'));
     }
 }
