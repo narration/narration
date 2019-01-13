@@ -19,32 +19,107 @@
             color: #d6fcb1;
         }
 
+        [v-cloak] { display:none; }
+
     </style>
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="flex flex-col w-full min-h-screen items-center justify-center">
+<div id="app" class="flex flex-col w-full min-h-screen items-center justify-center">
     <div class="title mb-8">
         Narration
     </div>
     <div class="links">
         <ul class="flex list-reset">
             <li class="mr-8">
-                <a class="no-underline text-4xl text-white hover:text-yellow-darker"
+                <a class="no-underline text-2xl text-white hover:text-yellow-darker"
                    href="https://github.com/narration/narration"
                 >
                     GITHUB
                 </a>
             </li>
             <li>
-                <a class="no-underline text-4xl text-white hover:text-yellow-darker"
+                <a class="no-underline text-2xl text-white hover:text-yellow-darker"
                    href="https://github.com/narration/narration"
                 >
                     DOCUMENTATION</a>
             </li>
         </ul>
     </div>
+    <div class="bg-white rounded shadow p-6 mt-16 w-full lg:w-3/4 lg:max-w-lg">
+        <div class="mb-6">
+            <div class="flex mt-4">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker"
+                       v-model="newTodo"
+                       @keyup.enter="addTodo"
+                       placeholder="Add Todo">
+                <button class="flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal"
+                        @click="addTodo"
+                        :disabled="newTodo.length === 0"
+                >
+                    Add
+                </button>
+            </div>
+        </div>
+        <div class="max-h-screen-1/2 overflow-y-scroll">
+            <div v-for="(todo, index) in todos" :key="index" :index="index" v-cloak>
+                <div class="mb-4">
+                    <div class="flex items-center w-full">
+                        <input type="checkbox" class="mr-2" :checked="todos[index]['complete']">
+                        <p class="w-auto"
+                           :class="todo.complete ? 'line-through text-green' : 'text-grey-darkest cursor-pointer hover:text-black hover:font-bold'"
+                           @click="toggleTodoCompletion(index)"
+                        >
+                            {{todo.description}}
+                        </p>
+                        <button class="flex-no-shrink p-2 ml-auto border-2 rounded text-red text-xs border-red hover:text-white hover:bg-red"
+                                @click="remove(index)">Remove
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </p>
+
+
+    <div v-if="todos.length === 0">
+        <p class="w-full text-center text-grey-dark">There are no todos</p>
+    </div>
 </div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+
+        data: {
+            newTodo: '',
+            todos: [
+                {description: 'Build something awesome', complete: true},
+                {description: 'Build something even more awesome', complete: false},
+            ],
+        },
+
+        methods: {
+            addTodo() {
+                this.todos.push({description: this.newTodo, complete: false})
+                this.newTodo = ''
+            },
+
+            remove(index) {
+                this.$delete(this.todos, index)
+            },
+
+            toggleTodoCompletion(index) {
+                var todo = this.todos[index]
+                todo.complete = !todo.complete
+                Vue.set(this.todos, index, todo)
+            },
+        },
+    })
+</script>
 </body>
 </html>
