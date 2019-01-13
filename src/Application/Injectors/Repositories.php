@@ -11,9 +11,9 @@ final class Repositories
     /**
      * Injects repositories into the container definitions.
      *
-     * @param array $definitions
+     * @param mixed[] $definitions
      *
-     * @return array
+     * @return mixed[]
      */
     public function __invoke(array $definitions): array
     {

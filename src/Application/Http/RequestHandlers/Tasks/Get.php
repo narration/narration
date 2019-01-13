@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Application\Http\RequestHandlers\Tasks;
 
 use Domain\Contracts\Repositories\TaskRepositoryInterface;
-use Narration\Framework\Http\Message\Response;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
+use Zend\Diactoros\Response\JsonResponse;
 
 final class Get implements RequestHandlerInterface
 {
@@ -38,6 +38,6 @@ final class Get implements RequestHandlerInterface
     {
         $id = $request->getAttribute('id');
 
-        return Response::json($this->taskRepository->find($id)->toArray());
+        return new JsonResponse($this->taskRepository->find($id)->toArray());
     }
 }

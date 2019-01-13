@@ -12,7 +12,8 @@
     "require": {
         "php": "^7.1.3",
         "doctrine/orm": "^2.6",
-        "narration/framework": "dev-master"
+        "narration/framework": "dev-master",
+        "thecodingmachine/phpstan-strict-rules": "^0.10.7"
     },
     "repositories":[
         {

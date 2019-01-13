@@ -29,7 +29,7 @@ final class Task
     /**
      * Converts the entity to array.
      *
-     * @return array
+     * @return mixed[]
      */
     public function toArray(): array
     {

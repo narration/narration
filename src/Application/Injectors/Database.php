@@ -31,9 +31,9 @@ final class Database
     /**
      * Injects the database configuration into the container definitions.
      *
-     * @param array $definitions
+     * @param mixed[] $definitions
      *
-     * @return array
+     * @return mixed[]
      *
      * @throws \Doctrine\ORM\ORMException
      */
