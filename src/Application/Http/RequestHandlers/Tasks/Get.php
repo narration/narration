@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Application\Http\RequestHandlers;
+namespace Application\Http\RequestHandlers\Tasks;
 
 use Domain\Contracts\Repositories\TaskRepositoryInterface;
 use Narration\Framework\Http\Message\Response;
@@ -13,6 +13,21 @@ use Psr\Http\Server\RequestHandlerInterface;
 final class Get implements RequestHandlerInterface
 {
     /**
+     * @var \Domain\Contracts\Repositories\TaskRepositoryInterface
+     */
+    private $taskRepository;
+
+    /**
+     * Get constructor.
+     *
+     * @param \Domain\Contracts\Repositories\TaskRepositoryInterface $taskRepository
+     */
+    public function __construct(TaskRepositoryInterface $taskRepository)
+    {
+        $this->taskRepository = $taskRepository;
+    }
+
+    /**
      * Handle the given request.
      *
      * @param  \Psr\Http\Message\ServerRequestInterface $request
@@ -21,6 +36,8 @@ final class Get implements RequestHandlerInterface
      */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
-        return Response::html(file_get_contents(__DIR__.'/../../../Presentation/index.html'));
+        $id = $request->getAttribute('id');
+
+        return Response::json($this->taskRepository->find($id)->toArray());
     }
 }
