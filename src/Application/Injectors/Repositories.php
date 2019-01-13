@@ -6,10 +6,10 @@ namespace Application\Injectors;
 
 use Domain\Contracts\Repositories\TaskRepositoryInterface;
 
-final class TaskRepository
+final class Repositories
 {
     /**
-     * Injects the Task Repository into the container definitions.
+     * Injects repositories into the container definitions.
      *
      * @param array $definitions
      *
@@ -17,7 +17,7 @@ final class TaskRepository
      */
     public function __invoke(array $definitions): array
     {
-        $definitions[TaskRepositoryInterface::class] = \Infrastructure\Persistance\Repositories\TaskRepository::class;
+        $definitions[TaskRepositoryInterface::class] = \Infrastructure\Persistence\Repositories\TaskRepository::class;
 
         return $definitions;
     }

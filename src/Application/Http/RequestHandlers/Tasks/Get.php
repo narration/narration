@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Application\Http\RequestHandlers;
+namespace Application\Http\RequestHandlers\Tasks;
 
 use Domain\Contracts\Repositories\TaskRepositoryInterface;
 use Narration\Framework\Http\Message\Response;

@@ -7,7 +7,7 @@ namespace Application\Injectors;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Tools\Setup;
 
-final class EntityManager
+final class Database
 {
     /**
      * The entities paths.
@@ -29,7 +29,7 @@ final class EntityManager
     ];
 
     /**
-     * Injects the entity manager into the container definitions.
+     * Injects the database configuration into the container definitions.
      *
      * @param array $definitions
      *

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Infrastructure\Persistance\Repositories;
+namespace Infrastructure\Persistence\Repositories;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Domain\Contracts\Repositories\TaskRepositoryInterface;
@@ -30,9 +30,8 @@ final class TaskRepository implements TaskRepositoryInterface
      */
     public function find(int $id): Task
     {
-        $task = $this->entityManager->find(Task::class, $id);
-
         /** @var \Domain\Entities\Task $task */
+        $task = $this->entityManager->find(Task::class, $id);
 
         return $task;
     }
