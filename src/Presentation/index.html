@@ -19,7 +19,9 @@
             color: #d6fcb1;
         }
 
-        [v-cloak] { display:none; }
+        [v-cloak] {
+            display: none;
+        }
 
     </style>
 
@@ -79,14 +81,13 @@
                     </div>
                 </div>
             </div>
+            <div v-if="todos.length === 0">
+                <p class="w-full text-center text-grey-dark">There are no todos</p>
+            </div>
         </div>
     </div>
-    </p>
 
 
-    <div v-if="todos.length === 0">
-        <p class="w-full text-center text-grey-dark">There are no todos</p>
-    </div>
 </div>
 </div>
 </div>
