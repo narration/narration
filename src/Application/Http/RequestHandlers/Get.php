@@ -38,6 +38,6 @@ final class Get implements RequestHandlerInterface
     {
         $id = $request->getAttribute('id');
 
-        return Response::html(file_get_contents(__DIR__.'/../../../../Presentation/index.html'));
+        return Response::html(file_get_contents(__DIR__.'/../../../Presentation/index.html'));
     }
 }
