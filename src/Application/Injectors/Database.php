@@ -6,6 +6,7 @@ namespace Application\Injectors;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Tools\Setup;
+use Psr\Container\ContainerInterface;
 
 final class Database
 {
@@ -31,13 +32,14 @@ final class Database
     /**
      * Injects the database configuration into the container definitions.
      *
-     * @param mixed[] $definitions
+     * @param  \Psr\Container\ContainerInterface $container
+     * @param  mixed[] $definitions
      *
      * @return mixed[]
      *
      * @throws \Doctrine\ORM\ORMException
      */
-    public function __invoke(array $definitions): array
+    public function __invoke(ContainerInterface $container, array $definitions): array
     {
         $configuration = Setup::createAnnotationMetadataConfiguration($this->paths, true);
 

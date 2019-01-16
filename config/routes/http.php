@@ -12,6 +12,6 @@ $router->middleware(new Application\Http\Middleware\TrimStrings());
 /**
  * The Request Handlers.
  */
-$router->get('/', new Application\Http\RequestHandlers\Index());
+$router->get('/', Application\Http\RequestHandlers\Index::class);
 
 return $router;
