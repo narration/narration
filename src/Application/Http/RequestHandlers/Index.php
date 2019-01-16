@@ -8,7 +8,6 @@ use Domain\Contracts\Repositories\TaskRepositoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Zend\Diactoros\Response\HtmlResponse;
 
 final class Index
 {
@@ -22,7 +21,7 @@ final class Index
     public function __invoke(ServerRequestInterface $request): array
     {
         return [
-            'quote' => 'Intellectuals solve problems, geniuses prevent them.'
+            'quote' => 'Intellectuals solve problems, geniuses prevent them.',
         ];
     }
 }
