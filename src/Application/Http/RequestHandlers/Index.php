@@ -10,7 +10,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-final class Get implements RequestHandlerInterface
+final class Index
 {
     /**
      * Handle the given request.
@@ -19,7 +19,7 @@ final class Get implements RequestHandlerInterface
      *
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function handle(ServerRequestInterface $request): ResponseInterface
+    public function __invoke(ServerRequestInterface $request): ResponseInterface
     {
         $contents = (string) file_get_contents(__DIR__.'/../../../Presentation/index.html');
 

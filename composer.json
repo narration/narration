@@ -12,17 +12,12 @@
     "require": {
         "php": "^7.1.3",
         "doctrine/orm": "^2.6",
-        "narration/framework": "dev-master",
+        "league/container": "^3.2",
+        "league/route": "^4.2",
         "thecodingmachine/phpstan-strict-rules": "^0.10.7",
         "zendframework/zend-diactoros": "^2.1",
         "zendframework/zend-httphandlerrunner": "^1.0"
     },
-    "repositories":[
-        {
-            "type": "path",
-            "url": "../framework"
-        }
-    ],
     "require-dev": {
         "phpstan/phpstan": "^0.10",
         "phpstan/phpstan-doctrine": "^0.10.0",
