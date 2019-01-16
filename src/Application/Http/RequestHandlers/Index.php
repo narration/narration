@@ -17,12 +17,12 @@ final class Index
      *
      * @param  \Psr\Http\Message\ServerRequestInterface $request
      *
-     * @return \Psr\Http\Message\ResponseInterface
+     * @return array
      */
-    public function __invoke(ServerRequestInterface $request): ResponseInterface
+    public function __invoke(ServerRequestInterface $request): array
     {
-        $contents = (string) file_get_contents(__DIR__.'/../../../Presentation/index.html');
-
-        return new HtmlResponse($contents);
+        return [
+            'quote' => 'Intellectuals solve problems, geniuses prevent them.'
+        ];
     }
 }
