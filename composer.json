@@ -14,14 +14,14 @@
         "doctrine/orm": "^2.6",
         "league/container": "^3.2",
         "league/route": "^4.2",
-        "thecodingmachine/phpstan-strict-rules": "^0.10.7",
         "zendframework/zend-diactoros": "^2.1",
         "zendframework/zend-httphandlerrunner": "^1.0"
     },
     "require-dev": {
-        "phpstan/phpstan": "^0.10",
-        "phpstan/phpstan-doctrine": "^0.10.0",
-        "phpstan/phpstan-strict-rules": "^0.10.1",
+        "localheinz/phpstan-rules": "^0.6.0",
+        "phpstan/phpstan": "^0.11",
+        "phpstan/phpstan-doctrine": "^0.11.0",
+        "phpstan/phpstan-strict-rules": "^0.11.1",
         "phpunit/phpunit": "^7.5"
     },
     "autoload-dev": {
