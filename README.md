@@ -128,7 +128,7 @@ Repository pattern classes that use Entities to **persist data** in a relational
 
 ## Contributing
 
-Thank you for considering to contribute to skeleton-php. All the contribution guidelines are mentioned [here](CONTRIBUTING.md).
+Thank you for considering to contribute to Narration. All the contribution guidelines are mentioned [here](CONTRIBUTING.md).
 
 You can have a look at the [CHANGELOG](CHANGELOG.md) for constant updates & detailed information about the changes. You can also follow the twitter account for latest announcements or just come say hi!: [@enunomaduro](https://twitter.com/enunomaduro)
 
