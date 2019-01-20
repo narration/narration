@@ -12,8 +12,7 @@
 
 **This is a work in progress**.
 
-Narration is the source for modern PHP - It enforces the implementation of proven
-patterns to bring resilience, reliability, and coordination to your web application.
+Narration is the source for modern PHP - It enforces the implementation of proven patterns to bring resilience, reliability, and coordination to your web application.
 
 ## Philosophies
 
@@ -26,14 +25,15 @@ patterns to bring resilience, reliability, and coordination to your web applicat
 
 > **Requires [PHP 7.1.3+](https://php.net/releases/)**
 
-Create your package using [Composer](https://getcomposer.org):
+Create your project using [Composer](https://getcomposer.org):
 
 ```bash
 composer create-project narration/narration blog --stability=dev --prefer-source
 ```
 
 Then, serve the appplication at `http://127.0.0.1:8000/`:
-```
+
+```bash
 php -S 127.0.0.1:8000 serve.php
 ```
 
@@ -45,13 +45,12 @@ This presentation layer should contain everythin related to User Interface. TODO
 
 ### Application
 
-The application logic is where you implement all use cases that depend on a given front end. It delegates the
-execution of business rules to the domain layer. **Keep this layer thin**.
+The application logic is where you implement all use cases that depend on a given front end. It delegates the execution of business rules to the domain layer. **Keep this layer thin**.
 
 #### Application > Http > Request Handlers
 
-HTTP request handlers are a fundamental part of any web application. Server-side code receives a
-request message, processes it, and produces a response message:
+HTTP request handlers are a fundamental part of any web application. Server-side code receives a request message, processes it, and produces a response message:
+
 ```php
 final class Get implements RequestHandlerInterface
 {
@@ -71,18 +70,14 @@ final class Get implements RequestHandlerInterface
 }
 ```
 
-Request handlers **should** be placed `Appplication/Http/RequestHandlers` to be
-detected by the Narration Framework. The routes are defined from the folder structure, and the `verb` is the name
-of the request handler. As example, the route `POST /users` can be defined
-creating the following Request Handler: `Appplication/Http/RequestHandlers/Users/Post.php`. This
-convention leads code that is easier to maintain, refactor and test.
+Request handlers **should** be placed at `Appplication/Http/RequestHandlers` to be detected by the Narration Framework. The routes are defined from the folder structure, and the `verb` is the name of the request handler. As example, the route `POST /users` can be defined creating the following Request Handler: `Appplication/Http/RequestHandlers/Users/Post.php`.
+
+This convention leads code that is easier to maintain, refactor and test.
 
 #### Application > Http > Middleware
 
-An HTTP middleware component participates in processing an HTTP message. It acts
-on the request, generating the response, or forwarding the request to a subsequent middleware
-and possibly acting on its response. It provides a convenient mechanism for filtering
-HTTP requests entering your application:
+An HTTP middleware component participates in processing an HTTP message. It acts on the request, generating the response, or forwarding the request to a subsequent middleware and possibly acting on its response. It provides a convenient mechanism for filtering HTTP requests entering your application:
+
 ```php
 final class TrimStrings implements MiddlewareInterface
 {
@@ -107,14 +102,11 @@ final class TrimStrings implements MiddlewareInterface
 }
 ```
 
-Middleware(s) **should** be placed `Appplication/Http/RequestHandlers` to be
-detected by the Narration Framework.
+Middleware(s) **should** be placed at `Appplication/Http/RequestHandlers` to be detected by the Narration Framework.
 
 #### Application > Injectors
 
-An injector injects the dependencies of the application on the container. They **should**
-be placed `Appplication/Injectors` to be detected by the Narration Framework. TODO...
-
+An injector injects the dependencies of the application on the container. They **should** be placed at `Appplication/Injectors` to be detected by the Narration Framework. TODO...
 
 ### Domain
 
@@ -122,9 +114,7 @@ Responsible for representing concepts of the business rules. This layer is the *
 
 ### Infrastructure
 
-The infrastructure layer is how the data that is initially held in domain entities (in memory) is
-persisted in databases or another persistent store. An example is using Doctrine code to implement the
-Repository pattern classes that use Entities to **persist data** in a relational database.
+The infrastructure layer is how the data that is initially held in domain entities (in memory) is persisted in databases or another persistent store. An example is using Doctrine code to implement the Repository pattern classes that use Entities to **persist data** in a relational database.
 
 ## Contributing
 
@@ -133,6 +123,7 @@ Thank you for considering to contribute to Narration. All the contribution guide
 You can have a look at the [CHANGELOG](CHANGELOG.md) for constant updates & detailed information about the changes. You can also follow the twitter account for latest announcements or just come say hi!: [@enunomaduro](https://twitter.com/enunomaduro)
 
 ## Support the development
+
 **Do you like this project? Support it by donating**
 
 - PayPal: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L)
