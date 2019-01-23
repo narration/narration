@@ -4,7 +4,7 @@
 
 
 <p align="center">
-    <img title="Narration" width="50%" src="https://raw.githubusercontent.com/narration/art/master/code.png" />
+    <img title="Narration" width="70%" src="https://raw.githubusercontent.com/narration/art/master/code.png" />
 </p>
 
 <p align="center">
