@@ -2,6 +2,11 @@
     <img title="Narration" width="300" src="https://raw.githubusercontent.com/narration/art/master/png/logotype.png" />
 </p>
 
+
+<p align="center">
+    <img title="Narration" width="300" src="https://raw.githubusercontent.com/narration/art/master/code.png" />
+</p>
+
 <p align="center">
   <a href="https://travis-ci.org/narration/narration"><img src="https://img.shields.io/travis/narration/narration/master.svg" alt="Build Status"></img></a>
   <a href="https://scrutinizer-ci.com/g/narration/narration"><img src="https://img.shields.io/scrutinizer/g/narration/narration.svg" alt="Quality Score"></img></a>
@@ -13,14 +18,6 @@
 **This is a work in progress**.
 
 Narration is the source for modern PHP - It enforces the implementation of proven patterns to bring resilience, reliability, and coordination to your web application.
-
-<p align="center">
-    <img title="Narration" width="300" src="https://raw.githubusercontent.com/narration/art/master/code.png" />
-</p>
-
-<p align="center">
-    <img title="Narration" width="300" src="https://raw.githubusercontent.com/narration/art/master/png/logotype.png" />
-</p>
 
 ## Philosophies
 
