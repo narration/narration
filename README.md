@@ -1,5 +1,5 @@
 <p align="center">
-    <img title="Narration" height="300" src="https://raw.githubusercontent.com/narration/art/master/png/logotype.png" />
+    <img title="Narration" style="max-width:50%;" src="https://raw.githubusercontent.com/narration/art/master/png/logotype.png" />
 </p>
 
 <p align="center">
