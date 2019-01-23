@@ -17,7 +17,7 @@
 
 **This is a work in progress**.
 
-Narration is the source for modern PHP - It enforces the implementation of proven patterns to bring resilience, reliability, and coordination to your web application.
+Narration is the source for a modern PHP framework - It enforces the implementation of proven patterns to bring resilience, reliability, and coordination to your web application.
 
 ## Philosophies
 
