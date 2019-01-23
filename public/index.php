@@ -2,25 +2,20 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
+use Narration\Http\Kernel;
+use Narration\Http\Request;
 
 /**
- * Capture the request from globals.
- */
-$request = Zend\Diactoros\ServerRequestFactory::fromGlobals();
-
-/**
- * Creates an new instance of the router and set the routes on the routes file.
+ * Creates an new instance of the router.
  */
 $router = require __DIR__ . '/../config/routes/http.php';
 
 /**
- * Dispatch the response.
+ * Capture the request from globals.
  */
-$response = $router->dispatch($request);
+$request = Request::capture();
 
 /**
- * Emits the response to the browser.
+ * Dispatch the request using the router.
  */
-(new \Zend\HttpHandlerRunner\Emitter\SapiEmitter())->emit($response);
+Kernel::using($router)->dispatch($request);

@@ -14,17 +14,16 @@ final class Repositories
     /**
      * Injects repositories into the container definitions.
      *
-     * @param  \Psr\Container\ContainerInterface $container
-     * @param  mixed[] $definitions
-     *
      * @return mixed[]
      */
-    public function __invoke(ContainerInterface $container, array $definitions): array
+    public function __invoke(): array
     {
-        $entityManager = $container->get(EntityManagerInterface::class);
+        return [
+            TaskRepositoryInterface::class => function($container) {
+                $entityManager = $container->get(EntityManagerInterface::class);
 
-        $definitions[TaskRepositoryInterface::class] = new TaskRepository($entityManager);
-
-        return $definitions;
+                return new TaskRepository($entityManager);
+            },
+        ];
     }
 }

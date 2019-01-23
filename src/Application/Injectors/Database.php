@@ -32,21 +32,18 @@ final class Database
     /**
      * Injects the database configuration into the container definitions.
      *
-     * @param  \Psr\Container\ContainerInterface $container
-     * @param  mixed[] $definitions
-     *
      * @return mixed[]
      *
      * @throws \Doctrine\ORM\ORMException
      */
-    public function __invoke(ContainerInterface $container, array $definitions): array
+    public function __invoke(): array
     {
         $configuration = Setup::createAnnotationMetadataConfiguration($this->paths, true);
 
         $entityManager = \Doctrine\ORM\EntityManager::create($this->connection, $configuration);
 
-        $definitions[EntityManagerInterface::class] = $entityManager;
-
-        return $definitions;
+        return [
+            EntityManagerInterface::class => $entityManager
+        ];
     }
 }

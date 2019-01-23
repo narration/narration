@@ -1,7 +1,5 @@
 includes:
-    - vendor/phpstan/phpstan-doctrine/extension.neon
-    - vendor/phpstan/phpstan-strict-rules/rules.neon
-    - vendor/localheinz/phpstan-rules/rules.neon
+    - vendor/narration/phpstan-rules/rules.neon
 
 parameters:
     level: max
