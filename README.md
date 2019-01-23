@@ -14,6 +14,14 @@
 
 Narration is the source for modern PHP - It enforces the implementation of proven patterns to bring resilience, reliability, and coordination to your web application.
 
+<p align="center">
+    <img title="Narration" width="300" src="https://raw.githubusercontent.com/narration/art/master/code.png" />
+</p>
+
+<p align="center">
+    <img title="Narration" width="300" src="https://raw.githubusercontent.com/narration/art/master/png/logotype.png" />
+</p>
+
 ## Philosophies
 
 - **DDD** oriented code architecture
