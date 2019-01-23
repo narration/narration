@@ -1,5 +1,5 @@
 <p align="center">
-    <img title="Narration" height="300" src="https://raw.githubusercontent.com/narration/narration/master/docs/request-handler.png" />
+    <img title="Narration" height="300" src="https://raw.githubusercontent.com/narration/art/master/png/logotype.png" />
 </p>
 
 <p align="center">
@@ -52,25 +52,25 @@ The application logic is where you implement all use cases that depend on a give
 HTTP request handlers are a fundamental part of any web application. Server-side code receives a request message, processes it, and produces a response message:
 
 ```php
-final class Get implements RequestHandlerInterface
+final class Index
 {
     /**
      * Handle the given request.
      *
      * @param  \Psr\Http\Message\ServerRequestInterface $request
      *
-     * @return \Psr\Http\Message\ResponseInterface
+     * @return array
      */
-    public function handle(ServerRequestInterface $request): ResponseInterface
+    public function __invoke(ServerRequestInterface $request): array
     {
-        return Response::json([
-            'fresh' => 'start'
-        ]);
+        return [
+            'quote' => 'Intellectuals solve problems, geniuses prevent them.',
+        ];
     }
 }
 ```
 
-Request handlers **should** be placed at `Appplication/Http/RequestHandlers` to be detected by the Narration Framework. The routes are defined from the folder structure, and the `verb` is the name of the request handler. As example, the route `POST /users` can be defined creating the following Request Handler: `Appplication/Http/RequestHandlers/Users/Post.php`.
+Request handlers **should** be placed at `Appplication/Http/RequestHandlers`. The routes are defined within the `config/routes/http.php` file.
 
 This convention leads code that is easier to maintain, refactor and test.
 
@@ -102,11 +102,13 @@ final class TrimStrings implements MiddlewareInterface
 }
 ```
 
-Middleware(s) **should** be placed at `Appplication/Http/RequestHandlers` to be detected by the Narration Framework.
+The middleware are defined within the `config/routes/http.php` file.
 
 #### Application > Injectors
 
-An injector injects the dependencies of the application on the container. They **should** be placed at `Appplication/Injectors` to be detected by the Narration Framework. TODO...
+An injector injects the dependencies of the application on the container. They **should** be placed at `Appplication/Injectors`.
+
+Injectors are defined within the `config/container.php` file.
 
 ### Domain
 
