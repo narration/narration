@@ -9,4 +9,5 @@ use Narration\Container\Container;
 return Container::makeWithInjectors([
     Application\Injectors\Database::class,
     Application\Injectors\Repositories::class,
+    Application\Injectors\Logging::class,
 ]);

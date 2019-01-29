@@ -4,13 +4,21 @@ declare(strict_types=1);
 
 namespace Application\Http\RequestHandlers;
 
-use Domain\Contracts\Repositories\TaskRepositoryInterface;
-use Psr\Http\Message\ResponseInterface;
+use Monolog\Logger;
 use Psr\Http\Message\ServerRequestInterface;
-use Psr\Http\Server\RequestHandlerInterface;
 
 final class Index
 {
+    /**
+     * @var Logger
+     */
+    private $logger;
+
+    public function __construct(Logger $logger)
+    {
+        $this->logger = $logger;
+    }
+
     /**
      * Handle the given request.
      *
@@ -20,6 +28,7 @@ final class Index
      */
     public function __invoke(ServerRequestInterface $request): array
     {
+        $this->logger->debug('Hit ' . __CLASS__);
         return [
             'quote' => 'Intellectuals solve problems, geniuses prevent them.',
         ];
