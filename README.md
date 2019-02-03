@@ -111,6 +111,10 @@ The middleware are defined within the `config/routes/http.php` file.
 
 #### Application > Injectors
 
+We provide a simple, yet powerful, IOC container. The framework doesn’t couple you to our container, feel free to swap to another PSR-11 implementation on the ‘config/container.php’ file.
+
+The container is used by the default  PSR-7 router of the framework to inject the necessary dependencies on the request handlers.
+
 An injector injects the dependencies of the application on the container. They **should** be placed at `Appplication/Injectors`.
 
 Injectors are defined within the `config/container.php` file.
