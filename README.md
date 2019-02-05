@@ -24,7 +24,7 @@ Narration is the source for modern PHP - It enforces the implementation of prove
 - **DDD** oriented code architecture
 - **Zero coupling** to the framework
 - **Strong PHPStan** rules to ensure the quality of the code
-- For **Scalable PSR-7 and PSR-15** compilant REST services.
+- For **Scalable PSR-7 and PSR-15** compliant REST services.
 
 ## Quick start
 
