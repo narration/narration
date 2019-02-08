@@ -4,5 +4,6 @@ includes:
 parameters:
     level: max
     paths:
+        - config
         - src
         - tests
