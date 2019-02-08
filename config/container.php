@@ -7,6 +7,5 @@ use Narration\Container\Container;
  * the definitions provided by the injectors.
  */
 return Container::makeWithInjectors([
-    Application\Injectors\Database::class,
     Application\Injectors\Repositories::class,
 ]);
