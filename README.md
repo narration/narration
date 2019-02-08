@@ -1,3 +1,5 @@
+**THIS PACKAGE HASN'T BEEN RELEASED, DO NOT USE YET**
+
 <p align="center">
     <img title="Narration" width="30%" src="https://raw.githubusercontent.com/narration/art/master/png/logotype.png" />
 </p>
