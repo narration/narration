@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": "^7.1.3",
+        "php": "^7.2",
         "narration/console": "dev-master",
         "narration/container": "dev-master",
         "narration/http": "dev-master",
@@ -19,7 +19,7 @@
     "require-dev": {
         "narration/phpstan-rules": "dev-master",
         "phpstan/phpstan": "^0.11",
-        "phpunit/phpunit": "^7.5",
+        "phpunit/phpunit": "^8.0",
         "symfony/var-dumper": "^4.2"
     },
     "autoload-dev": {
