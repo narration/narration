@@ -10,7 +10,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-class TrimStrings implements MiddlewareInterface
+final class TrimStrings implements MiddlewareInterface
 {
     /**
      * Filters the given request before or after sending it to the handler.
@@ -28,6 +28,6 @@ class TrimStrings implements MiddlewareInterface
             }
         }
 
-        return $handler->handle($request->getAttributes());
+        return $handler->handle($request);
     }
 }
