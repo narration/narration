@@ -14,10 +14,11 @@
         "narration/console": "dev-master",
         "narration/container": "dev-master",
         "narration/http": "dev-master",
-        "narration/router": "dev-master"
+        "narration/testing": "dev-master",
+        "psr/container": "^1.0"
     },
     "require-dev": {
-        "narration/phpstan-rules": "dev-master",
+        "michaelmoussa/php-coverage-checker": "^1.1",
         "phpstan/phpstan": "^0.11",
         "phpunit/phpunit": "^8.0",
         "symfony/var-dumper": "^4.2"

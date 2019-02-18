@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-$router = new \Narration\Router\Router(require __DIR__.'/../container.php');
+$router = new \Narration\Http\Router(require __DIR__.'/../container.php');
 
 /**
  * HTTP middleware is a way to move common request and

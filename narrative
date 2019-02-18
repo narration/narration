@@ -6,9 +6,9 @@ require __DIR__.'/vendor/autoload.php';
 use Narration\Console\Kernel;
 
 /**
- * Gets the Application Commands.
+ * Creates an new instance of the router.
  */
-$commands = require __DIR__ . '/config/routes/console.php';
+$router = require __DIR__.'/config/routes/console.php';
 
 /**
  * Capture the input from globals.
@@ -16,6 +16,6 @@ $commands = require __DIR__ . '/config/routes/console.php';
 $input = new Symfony\Component\Console\Input\ArgvInput();
 
 /**
- * Dispatch the request using the kernel.
+ * Dispatch the input using the router.
  */
-Kernel::attach($commands)->dispatch($input);
+Kernel::using($router)->dispatch($input);
