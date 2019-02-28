@@ -47,7 +47,7 @@ php -S 127.0.0.1:8000 serve.php
 
 ### Presentation
 
-This presentation layer should contain everythin related to User Interface. TODO...
+This presentation layer should contain everything related to User Interface. TODO...
 
 ### Application
 
