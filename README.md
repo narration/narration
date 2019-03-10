@@ -45,10 +45,6 @@ php -S 127.0.0.1:8000 serve.php
 
 ## Structure
 
-### Presentation
-
-This presentation layer should contain everything related to User Interface. TODO...
-
 ### Application
 
 The application logic is where you implement all use cases that depend on a given front end. It delegates the execution of business rules to the domain layer. **Keep this layer thin**.
