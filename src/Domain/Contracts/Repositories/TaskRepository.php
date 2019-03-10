@@ -6,6 +6,6 @@ namespace Domain\Contracts\Repositories;
 
 use Domain\Entities\Task;
 
-interface TaskRepositoryInterface
+interface TaskRepository
 {
 }
